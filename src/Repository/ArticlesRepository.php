@@ -3,6 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Articles;
+
+use App\Entity\BmlMaster;
+use App\Entity\BmlFfData;
+
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\EntityManagerInterface;
@@ -35,6 +39,18 @@ class ArticlesRepository extends ServiceEntityRepository
                                 ->select(['articles.title','articles.body'])
                                 ->from(Articles::class, 'articles');
         }
+        dd($queryBuilder->getQuery());
+        return $queryBuilder->getQuery()->getResult();
+    }
+
+    public function SearchDynamicDataByinput($input = []): Array
+    {
+        $queryBuilder =  $this->entity_manager->createQueryBuilder()
+                            ->select(['bmlmaster.bmlPkid','bmlmaster.partCode','bmlmaster.description',
+                            'bmlmaster.preferredMaterial','bmlffdata.paramName','bmlffdata.paramValue','bmlffdata.bmlFfdPkid'])
+                            ->from(BmlMaster::class, 'bmlmaster')
+                            ->Join(BmlFfData::class, 'bmlffdata', 'WITH', ' bmlffdata.bmlFkid = bmlmaster.bmlPkid');
+
         return $queryBuilder->getQuery()->getResult();
     }
 }

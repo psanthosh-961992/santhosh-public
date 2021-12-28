@@ -9,4 +9,9 @@ index:
 api_read:
    path: /read
    controller: App\Controller\TestController::read
+   methods:    GET
+
+search:
+   path: /search
+   controller: App\Controller\TestController::search
    methods:    POST
