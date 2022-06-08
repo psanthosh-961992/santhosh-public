@@ -1,0 +1,411 @@
+{
+    "type" : "existing",
+    "sectors" : [
+        {
+            "no_of_antennas": 2,
+            "antenna_infor": [
+                {
+                    "antenna_model" : "T2040L3R011",
+                    "no_of_tus" : 2
+                },
+                {
+                    "antenna_model" : "T2040L3R012",
+                    "no_of_tus" : 1
+                }
+            ],
+            "list_infor" : [
+                {
+                    "list_pk_id" : 1,
+                    "list_name" : "port_num",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                {
+                    "list_pk_id" : 2,
+                    "list_name" : "frequency",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 3,
+                    "list_name" : "antenna_gain_dbi",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 4,
+                    "list_name" : "carrier_using_ports",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 5,
+                    "list_name" : "orientation",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 6,
+                    "list_name" : "electrical_down_tilt",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 7,
+                    "list_name" : "mechanical_tilt",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 8,
+                    "list_name" : "mounting_height",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 9,
+                    "list_name" : "ret_on_antenna",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 10,
+                    "list_name" : "feeder_size",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 11,
+                    "list_name" : "feeder_type",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 12,
+                    "list_name" : "feeder_length",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 13,
+                    "list_name" : "re_used_feeder",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 14,
+                    "list_name" : "tail_sys_internal",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 15,
+                    "list_name" : "tail_sys_internal_tot_length",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 16,
+                    "list_name" : "tail_sys_internal_total_num",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 17,
+                    "list_name" : "tail_sys_external",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 18,
+                    "list_name" : "tail_sys_external_tot_len",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 19,
+                    "list_name" : "tail_sys_external_total_num",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 20,
+                    "list_name" : "combiner_filter_1",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 21,
+                    "list_name" : "combiner_filter_2",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 22,
+                    "list_name" : "combiner_filter_3",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 23,
+                    "list_name" : "combiner_filter_4",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                 {
+                    "list_pk_id" : 24,
+                    "list_name" : "combiner_filter_5",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                {
+                    "list_pk_id" : 25,
+                    "list_name" : "dc_stops",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                },
+                {
+                    "list_pk_id" : 26,
+                    "list_name" : "tma",
+                    "tus_infor": [
+                        {
+                            "T2040L3R011-1" : "1"
+                        },
+                        {
+                            "T2040L3R011-2" : "2"
+                        },
+                        {
+                            "T2040L3R011-3" : "3"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}
