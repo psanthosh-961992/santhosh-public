@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Helpers;
+
+class Constants {
+
+      const PORT_NUM = 'port_num';
+      const FREQUENCY = 'frequency';
+      const ANTENNA_GAIN_DBI = 'antenna_gain_dbi';
+      const CARRIER_USING_PORTS = 'carrier_using_ports';
+      const ORIENTATION = 'orientation';
+      const ELECTRICAL_DOWN_TILT = 'electrical_down_tilt';
+      const MECHANICAL_TILT = 'mechanical_tilt';
+      const MOUNTING_HEIGHT = 'mounting_height';
+      const RET_ON_ANTENNA = 'ret_on_antenna';
+      const FEEDER_SIZE = 'feeder_size';
+      const FEEDER_TYPE = 'feeder_type';
+      const FEEDER_LENGTH = 'feeder_length';
+      const RE_USED_FEEDER = 're_used_feeder';
+      const TAIL_SYS_INTERNAL = 'tail_sys_internal';
+      const TAIL_SYS_INTERNAL_TOT_LENGTH = 'tail_sys_internal_tot_length';
+      const TAIL_SYS_INTERNAL_TOT_NUM = 'tail_sys_internal_total_num';
+      const TAIL_SYS_EXTERNAL = 'tail_sys_external';
+      const TAIL_SYS_EXTERNAL_TOT_LEN = 'tail_sys_external_tot_len';
+      const TAIL_SYS_EXTERNAL_TOT_NUM = 'tail_sys_external_total_num';
+      const COMBINER_FILTER_1 = 'combiner_filter_1';
+      const COMBINER_FILTER_2 = 'combiner_filter_2';
+      const COMBINER_FILTER_3 = 'combiner_filter_3';
+      const COMBINER_FILTER_4 = 'combiner_filter_4';
+      const COMBINER_FILTER_5 = 'combiner_filter_5';
+      const DC_STOPS = 'dc_stops';
+      const TMA = 'tma';
+
+      
+
+      const CONNECTOR_LOSS = 'connector_loss';
+      const EXISTING_SYS_LOSS = 'existing_sys_loss';
+      const POWER_AT_THE_INPUT_OF_ANTENNA = 'power_at_the_input_of_antenna';
+      const EIRP = 'EIRP';
+
+}
