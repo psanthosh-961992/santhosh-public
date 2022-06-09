@@ -1,4 +1,7 @@
-public function index(Request $request): Response
+/**
+     * @Route("/test", name="test")
+     */
+    public function index(Request $request): Response
     {
         $request = json_decode($request->getContent(),true);
         // dd($request);
