@@ -1,0 +1,72 @@
+<?php
+
+namespace App\Traits;
+
+use App\Helpers\Constants;
+use Symfony\Component\Console\Input\Input;
+
+trait RFNSATrait{
+
+
+      public function validateRFNSAData($input = []){
+           //dd($input);
+            $sectors = $input['sectors'];
+            foreach($sectors as $sector){
+                  /* Antenna Information Validation */
+                  if($sector['no_of_antennas'] != count($sector['antenna_infor'])){
+                        return false;
+                  }
+
+                  /*Antenna Information Count Validation */
+                  $no_of_tus = 0;
+                  foreach($sector['antenna_infor'] as $antenna){
+                        $no_of_tus += $antenna['no_of_tus'];
+                  }
+                  foreach($sector['list_infor'] as $list_infor){
+                        if($no_of_tus != count($list_infor['tus_infor'])){
+                              return false;
+                        }
+                  }
+            }
+            return true;
+      }
+
+      public function getFormulaBasedValues($antenna_tu = '', $list_infor = [], $formula_req_elements = []){
+            $req_array = [];
+            foreach($formula_req_elements as $formula_list_name){
+                  foreach($list_infor as $list_item){
+                        if($list_item['list_name'] == $formula_list_name){
+                              foreach($list_item['tus_infor'] as $dev){
+                                    foreach($dev as $key => $value){
+                                          if($key == $antenna_tu){
+                                                $req_array[$formula_list_name] =  $value;
+                                                break;
+                                          }
+                                    }
+                                }
+                        }
+                  }
+            }
+            return $req_array;
+      }
+
+      public function ConnectorLossCalculator($antenna_tu = '', $list_infor = []){
+            /* 
+                  Formula Designed List Items
+
+                  FEEDER_LENGTH, TAIL_SYS_INTERNAL, FREQUENCY, TAIL_SYS_INTERNAL_TOT_NUM, 
+                  TAIL_SYS_EXTERNAL, TAIL_SYS_EXTERNAL_TOT_NUM, FEEDER_TYPE 
+            */
+            $formula_req_elements = [Constants::FEEDER_LENGTH,Constants::TAIL_SYS_INTERNAL,Constants::FREQUENCY,
+                                     Constants::TAIL_SYS_INTERNAL_TOT_NUM,Constants::TAIL_SYS_EXTERNAL,
+                                     Constants::TAIL_SYS_EXTERNAL_TOT_NUM,Constants::FEEDER_TYPE];
+           
+            $req_array = $this->getFormulaBasedValues($antenna_tu, $list_infor, $formula_req_elements);
+            dd($req_array);
+
+
+
+      }
+    
+
+}
