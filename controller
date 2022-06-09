@@ -1,0 +1,80 @@
+public function index(Request $request): Response
+    {
+        $request = json_decode($request->getContent(),true);
+        // dd($request);
+        $response = [];
+        $is_valid_input = $this->validateRFNSAData($request);
+        if(!$is_valid_input){
+            echo "Error in Input Validation";
+        }
+        $index = 0;
+        foreach($request['sectors'] as $sector){
+            $response[$index]['sector_name'] = $sector['name'];
+
+            $no_of_tus = 0;
+            foreach($sector['antenna_infor'] as $antenna){
+                  $no_of_tus += $antenna['no_of_tus'];
+            }
+           // dd($sector['list_infor']);
+            foreach($sector['list_infor'] as $list_infor){
+                
+                // $response[$index]['list_infor']['tus_infor'] = $list_infor['tus_infor'];
+                      
+                /*   Connector Loss Calculation */
+                $connector_loss = [];
+                $loop = 0;
+                foreach($list_infor['tus_infor'] as $dev){
+                    foreach($dev as $key => $value){
+                        $connector_loss[$loop][$key] = $value;
+                        $connector_loss[$loop][Constants::CONNECTOR_LOSS] = $this->ConnectorLossCalculator($key,$sector['list_infor']); 
+                        break;
+                    }
+                    $loop++;
+                }
+                $response[$index]['list_infor'][Constants::CONNECTOR_LOSS] = $connector_loss;
+                
+                /* Existing System Loss Calculation */
+                $existing_sys_loss = [];
+                $loop = 0;
+                foreach($list_infor['tus_infor'] as $dev){
+                    foreach($dev as $key => $value){
+                        $existing_sys_loss[$loop][$key] = $value;
+                        $existing_sys_loss[$loop][Constants::EXISTING_SYS_LOSS] = $value;
+                        break;
+                    }
+                    $loop++;
+                }
+                $response[$index]['list_infor'][Constants::EXISTING_SYS_LOSS] = $existing_sys_loss;
+                
+                /* Power At The Input of Antenna Calculation */
+                $power_antenna = [];
+                $loop = 0;
+                foreach($list_infor['tus_infor'] as $dev){
+                    foreach($dev as $key => $value){
+                        $power_antenna[$loop][$key] = $value;
+                        $power_antenna[$loop][Constants::POWER_AT_THE_INPUT_OF_ANTENNA] = $value;
+                        break;
+                    }
+                    $loop++;
+                }
+                $response[$index]['list_infor'][Constants::POWER_AT_THE_INPUT_OF_ANTENNA] = $power_antenna;
+                
+                /* EIRP Calculation */
+                $EIRP = [];
+                $loop = 0;
+                foreach($list_infor['tus_infor'] as $dev){
+                    foreach($dev as $key => $value){
+                        $EIRP[$loop][$key] = $value;
+                        $EIRP[$loop][Constants::EIRP] = $value;
+                        break;
+                    }
+                    $loop++;
+                }
+                $response[$index]['list_infor'][Constants::EIRP] = $EIRP;
+                
+          }
+          $index++;
+        }
+        return $this->json($response);
+        
+    }
