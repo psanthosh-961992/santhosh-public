@@ -57,45 +57,47 @@ trait RFNSATrait{
                   FEEDER_LENGTH, TAIL_SYS_INTERNAL, FREQUENCY, TAIL_SYS_INTERNAL_TOT_NUM, 
                   TAIL_SYS_EXTERNAL, TAIL_SYS_EXTERNAL_TOT_NUM, FEEDER_TYPE 
             */
-            $formula_req_elements = [Constants::FEEDER_LENGTH,Constants::TAIL_SYS_INTERNAL,Constants::FREQUENCY,
-                                     Constants::TAIL_SYS_INTERNAL_TOT_NUM,Constants::TAIL_SYS_EXTERNAL,
-                                     Constants::TAIL_SYS_EXTERNAL_TOT_NUM,Constants::FEEDER_TYPE];
+            $formula_req_elements = [Constants::EXIST_FEEDER_LENGTH,Constants::EXIST_TAIL_SYS_INTERNAL,Constants::EXIST_FREQUENCY,
+                                     Constants::EXIST_TAIL_SYS_INTERNAL_TOT_NUM,Constants::EXIST_TAIL_SYS_EXTERNAL,
+                                     Constants::EXIST_TAIL_SYS_EXTERNAL_TOT_NUM,Constants::EXIST_FEEDER_TYPE];
            
             $req_array = $this->getFormulaBasedValues($antenna_tu, $list_infor, $formula_req_elements);
             
+            // dd($req_array);
+
             $sub_formula_1 = $sub_formula_2 = $sub_formula_3 = $sub_formula_4 = $sub_formula_5 = '';
             
-            if($req_array[Constants::TAIL_SYS_INTERNAL] == 'None'){
+            if($req_array[Constants::EXIST_TAIL_SYS_INTERNAL] == 'None'){
                   $sub_formula_1 = 0;
             } else {
-                  $sub_formula_1 = (0.05*sqrt($req_array[Constants::FREQUENCY]/1000))*($req_array[Constants::TAIL_SYS_INTERNAL_TOT_NUM]*2);
+                  $sub_formula_1 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*($req_array[Constants::EXIST_TAIL_SYS_INTERNAL_TOT_NUM]*2);
             }
 
-            if($req_array[Constants::TAIL_SYS_EXTERNAL] == 'None'){
+            if($req_array[Constants::EXIST_TAIL_SYS_EXTERNAL] == 'None'){
                   $sub_formula_2 = 0;
             } else {
-                  $sub_formula_2 = (0.05*sqrt($req_array[Constants::FREQUENCY]/1000))*($req_array[Constants::TAIL_SYS_EXTERNAL_TOT_NUM]*2);
+                  $sub_formula_2 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*($req_array[Constants::EXIST_TAIL_SYS_EXTERNAL_TOT_NUM]*2);
             }
 
-            if($req_array[Constants::TAIL_SYS_INTERNAL] == 'None'){
+            if($req_array[Constants::EXIST_TAIL_SYS_INTERNAL] == 'None'){
                   $sub_formula_3 = 0;
             } else {
-                  $sub_formula_3 = (0.05*sqrt($req_array[Constants::FREQUENCY]/1000))*($req_array[Constants::TAIL_SYS_INTERNAL_TOT_NUM]*2);
+                  $sub_formula_3 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*($req_array[Constants::EXIST_TAIL_SYS_INTERNAL_TOT_NUM]*2);
             }
 
-            if($req_array[Constants::TAIL_SYS_EXTERNAL] == 'None'){
+            if($req_array[Constants::EXIST_TAIL_SYS_EXTERNAL] == 'None'){
                   $sub_formula_4 = 0;
             } else {
-                  $sub_formula_4 = (0.05*sqrt($req_array[Constants::FREQUENCY]/1000))*($req_array[Constants::TAIL_SYS_EXTERNAL_TOT_NUM]*2);
+                  $sub_formula_4 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*($req_array[Constants::EXIST_TAIL_SYS_EXTERNAL_TOT_NUM]*2);
             }
 
-            if($req_array[Constants::FEEDER_TYPE] == 'None'){
+            if($req_array[Constants::EXIST_FEEDER_TYPE] == 'None'){
                   $sub_formula_5 = 0;
             } else {
-                  $sub_formula_5 = (0.05*sqrt($req_array[Constants::FREQUENCY]/1000))*(2);
+                  $sub_formula_5 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*(2);
             }
 
-            if($req_array[Constants::FEEDER_LENGTH] == 0){
+            if($req_array[Constants::EXIST_FEEDER_LENGTH] == 0){
                   return ($sub_formula_1 + $sub_formula_2);
             } else {
                   return ($sub_formula_3 + $sub_formula_4 + $sub_formula_5);
