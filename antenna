@@ -1,7 +1,8 @@
 {
-    "type" : "existing",
     "sectors" : [
         {
+            "name" : "sector1",
+            "type" : "existing",
             "no_of_antennas": 2,
             "antenna_infor": [
                 {
@@ -46,7 +47,7 @@
                 },
                  {
                     "list_pk_id" : 3,
-                    "list_name" : "antenna_gain_dbi",
+                    "list_name" : "total_rack",
                     "tus_infor": [
                         {
                             "T2040L3R011-1" : "1"
