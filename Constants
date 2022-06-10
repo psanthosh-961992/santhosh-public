@@ -4,38 +4,87 @@ namespace App\Helpers;
 
 class Constants {
 
-      const PORT_NUM = 'port_num';
-      const FREQUENCY = 'frequency';
-      const ANTENNA_GAIN_DBI = 'antenna_gain_dbi';
-      const CARRIER_USING_PORTS = 'carrier_using_ports';
-      const ORIENTATION = 'orientation';
-      const ELECTRICAL_DOWN_TILT = 'electrical_down_tilt';
-      const MECHANICAL_TILT = 'mechanical_tilt';
-      const MOUNTING_HEIGHT = 'mounting_height';
-      const RET_ON_ANTENNA = 'ret_on_antenna';
-      const FEEDER_SIZE = 'feeder_size';
-      const FEEDER_TYPE = 'feeder_type';
-      const FEEDER_LENGTH = 'feeder_length';
-      const RE_USED_FEEDER = 're_used_feeder';
-      const TAIL_SYS_INTERNAL = 'tail_sys_internal';
-      const TAIL_SYS_INTERNAL_TOT_LENGTH = 'tail_sys_internal_tot_length';
-      const TAIL_SYS_INTERNAL_TOT_NUM = 'tail_sys_internal_total_num';
-      const TAIL_SYS_EXTERNAL = 'tail_sys_external';
-      const TAIL_SYS_EXTERNAL_TOT_LEN = 'tail_sys_external_tot_len';
-      const TAIL_SYS_EXTERNAL_TOT_NUM = 'tail_sys_external_total_num';
-      const COMBINER_FILTER_1 = 'combiner_filter_1';
-      const COMBINER_FILTER_2 = 'combiner_filter_2';
-      const COMBINER_FILTER_3 = 'combiner_filter_3';
-      const COMBINER_FILTER_4 = 'combiner_filter_4';
-      const COMBINER_FILTER_5 = 'combiner_filter_5';
-      const DC_STOPS = 'dc_stops';
-      const TMA = 'tma';
+      /* Existing & Proposed System Input Param Keys */
+      const EXIST_PORT_NUM = 'port_num';
+      const EXIST_FREQUENCY = 'frequency';
+      const EXIST_CARRIER_USING_PORTS = 'carrier_using_ports';
+      const EXIST_ORIENTATION = 'orientation';
+      const EXIST_ELECTRICAL_DOWN_TILT = 'electrical_down_tilt';
+      const EXIST_MECHANICAL_TILT = 'mechanical_tilt';
+      const EXIST_MOUNTING_HEIGHT = 'mounting_height';
+      const EXIST_RET_ON_ANTENNA = 'ret_on_antenna';
+      const EXIST_FEEDER_SIZE = 'feeder_size';
+      const EXIST_FEEDER_TYPE = 'feeder_type';
+      const EXIST_FEEDER_LENGTH = 'feeder_length';
+      const EXIST_RE_USED_FEEDER = 're_used_feeder';
+      const EXIST_TAIL_SYS_INTERNAL = 'tail_sys_internal';
+      const EXIST_TAIL_SYS_INTERNAL_TOT_LENGTH = 'tail_sys_internal_tot_length';
+      const EXIST_TAIL_SYS_INTERNAL_TOT_NUM = 'tail_sys_internal_total_num';
+      const EXIST_TAIL_SYS_EXTERNAL = 'tail_sys_external';
+      const EXIST_TAIL_SYS_EXTERNAL_TOT_LEN = 'tail_sys_external_tot_len';
+      const EXIST_TAIL_SYS_EXTERNAL_TOT_NUM = 'tail_sys_external_total_num';
+      const EXIST_COMBINER_FILTER_1 = 'combiner_filter_1';
+      const EXIST_COMBINER_FILTER_2 = 'combiner_filter_2';
+      const EXIST_COMBINER_FILTER_3 = 'combiner_filter_3';
+      const EXIST_COMBINER_FILTER_4 = 'combiner_filter_4';
+      const EXIST_COMBINER_FILTER_5 = 'combiner_filter_5';
+      const EXIST_DC_STOPS = 'dc_stops';
+      const EXIST_TMA = 'total_rack';
+      const EXIST_TOTAL_RACK = 'tma';
 
+      /* Propsed System Input Param Keys */
+      const PROPOSED_PORT_NUM = 'port_num';
+      const PROPOSED_FREQUENCY = 'frequency';
+      const PROPOSED_CARRIER_USING_PORTS = 'carrier_using_ports';
+      const PROPOSED_ORIENTATION = 'orientation';
+      const PROPOSED_ELECTRICAL_DOWN_TILT = 'electrical_down_tilt';
+      const PROPOSED_MECHANICAL_TILT = 'mechanical_tilt';
+      const PROPOSED_MOUNTING_HEIGHT = 'mounting_height';
+      const PROPOSED_RET_ON_ANTENNA = 'ret_on_antenna';
+      const PROPOSED_FEEDER_SIZE = 'feeder_size';
+      const PROPOSED_FEEDER_TYPE = 'feeder_type';
+      const PROPOSED_FEEDER_LENGTH = 'feeder_length';
+      const PROPOSED_RE_USED_FEEDER = 're_used_feeder';
+      const PROPOSED_TAIL_SYS_INTERNAL = 'tail_sys_internal';
+      const PROPOSED_TAIL_SYS_INTERNAL_TOT_LENGTH = 'tail_sys_internal_tot_length';
+      const PROPOSED_TAIL_SYS_INTERNAL_TOT_NUM = 'tail_sys_internal_total_num';
+      const PROPOSED_TAIL_SYS_EXTERNAL = 'tail_sys_external';
+      const PROPOSED_TAIL_SYS_EXTERNAL_TOT_LEN = 'tail_sys_external_tot_len';
+      const PROPOSED_TAIL_SYS_EXTERNAL_TOT_NUM = 'tail_sys_external_total_num';
+      const PROPOSED_COMBINER_FILTER_1 = 'combiner_filter_1';
+      const PROPOSED_COMBINER_FILTER_2 = 'combiner_filter_2';
+      const PROPOSED_COMBINER_FILTER_3 = 'combiner_filter_3';
+      const PROPOSED_COMBINER_FILTER_4 = 'combiner_filter_4';
+      const PROPOSED_COMBINER_FILTER_5 = 'combiner_filter_5';
+      const PROPOSED_DC_STOPS = 'dc_stops';
+      const PROPOSED_TMA = 'total_rack';
+      const PROPOSED_TOTAL_RACK = 'tma';
       
+      /* Existing System Output Response Param Keys */
+      const EXIST_CONNECTOR_LOSS = 'connector_loss';
+      const EXIST_EXISTING_SYS_LOSS = 'existing_sys_loss';
+      const EXIST_POWER_AT_THE_INPUT_OF_ANTENNA = 'power_at_the_input_of_antenna';
+      const EXIST_EIRP = 'EIRP';
+      const EXIST_ANTENNA_GAIN_DBI = 'antenna_gain_dbi'; 
 
-      const CONNECTOR_LOSS = 'connector_loss';
-      const EXISTING_SYS_LOSS = 'existing_sys_loss';
-      const POWER_AT_THE_INPUT_OF_ANTENNA = 'power_at_the_input_of_antenna';
-      const EIRP = 'EIRP';
+      /* Proposed System Output Response Param Keys */
+      const PROPOSED_CONNECTOR_LOSS = 'connector_loss';
+      const PROPOSED_DL_SYS_LOSS = 'proposed_dl_sys_loss';
+      const PROPOSED_UL_SYS_LOSS = 'proposed_ul_sys_loss';
+      const PROPOSED_RX_ATT_SETTING = 'rx_att_setting';
+      const PROPOSED_EXIST_SYS_LOSS = 'existing_sys_loss';
+      const PROPOSED_SYS_LOSS_DELTA = 'sys_loss_delta';
+      const PROPOSED_EXISTING_ANTENNA_GAIN = 'existing_antenna_gain';///////////
+      const PROPOSED_ANTENNA_SYS_LOSS = 'antenna_sys_loss';
+      const PROPOSED_TOTAL_RACK_TO_POWER = 'total_rack_power';
+      const PROPOSED_POWER_AT_INPUT = 'power_at_input';
+      const PROPOSED_EIRP = 'EIRP';
+      const PROPOSED_EIRP_DELTA = 'EIRP_delta';
+      const PROPOSED_ANTENNA_GAIN_DBI = 'antenna_gain_dbi'; 
+
+
+
+
+
 
 }
