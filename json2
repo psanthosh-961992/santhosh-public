@@ -7,7 +7,6 @@
     
 
 }
-
 public function index(Request $request): Response {
 
         $isValidInput = false;
@@ -19,7 +18,9 @@ public function index(Request $request): Response {
                 case 1 :  //Only Site Id Information
                         if(array_key_exists("site_id",$request)){
                             $isValidInput = true;
-                            $response = [];
+                            $response = ['status' => 200,
+                                            'data'=> 'Query Response' 
+                                        ];
                         } 
                     break;
                 case 2 : // Site Id and Sector
