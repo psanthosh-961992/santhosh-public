@@ -1,62 +1,66 @@
 {
     "site_id" : 1,
-    "sector" : 2,
-    "no_of_antennas": 3,
-    "antenna_model":"abc",
-    "no_of_tus" : 3
-    
-
-}
-public function index(Request $request): Response {
-
-        $isValidInput = false;
-        $response = [];
-        try {
-            $request = json_decode($request->getContent(),true);
-            $case = isset($request) ? count($request) : 0 ;
-            switch($case){
-                case 1 :  //Only Site Id Information
-                        if(array_key_exists("site_id",$request)){
-                            $isValidInput = true;
-                            $response = ['status' => 200,
-                                            'data'=> 'Query Response' 
-                                        ];
-                        } 
-                    break;
-                case 2 : // Site Id and Sector
-                        if(array_key_exists("site_id",$request) && array_key_exists("sector",$request) ){
-                            $isValidInput = true;
-                            $response = [];
-                        } 
-                    break;
-                case 3 : // Site Id, Sector and no_of_antennas
-                        if(array_key_exists("site_id",$request) && array_key_exists("sector",$request) 
-                            && array_key_exists("no_of_antennas",$request)){
-                            $isValidInput = true;  
-                            $response = [];    
-                        } 
-                    break;
-                case 4 : // Site Id, Sector, no_of_antennas and antenna_model
-                    if(array_key_exists("site_id",$request) && array_key_exists("sector",$request) 
-                        && array_key_exists("no_of_antennas",$request)  && array_key_exists("antenna_model",$request)){
-                            $isValidInput = true; 
-                            $response = [];
-                    } 
-                    break;
-                case 5 : // Site Id, Sector, no_of_antennas, antenna_model and no_of_tus
-                    if(array_key_exists("site_id",$request) && array_key_exists("sector",$request) 
-                        && array_key_exists("no_of_antennas",$request)  && array_key_exists("antenna_model",$request)
-                        && array_key_exists("no_of_tus",$request)){
-                            $isValidInput = true;   
-                            $response = []; 
-                    } 
-                    break;
-            }
-            if(!$isValidInput){
-                $response = ['status'=> 400,'message' => "Bad input"];
-            }
-        } catch(Exception $e){
-            $response = ['status'=> 500,'message' => $e->getMessage()];
+    "no_of_sectors" : 2,
+    "sectors" : [
+        {
+            "name" : "Sector 1",
+            "no_of_antennas" : 2,
+            "antenna_models" : [
+                {
+                    "model" : "T2040L3R011",
+                    "no_of_tus" : 2
+                },
+                {
+                    "model" : "T2040L3R011-YZ",
+                    "no_of_tus" : 2
+                }
+            ],
+            "list_info" : [
+                {
+                    "list_name" : "Port Number",
+                    "list_pk_id" : 1,
+                    "tus_infor": [
+                        {    
+                            "name" : "T2040L3R011-1",
+                            "value" : 1
+                        },
+                        {    
+                            "name" : "T2040L3R011-2",
+                            "value" : 2
+                        },
+                        {    
+                            "name" : "T2040L3R011-3",
+                            "value" : 3
+                        },
+                        {    
+                            "name" : "T2040L3R011-4",
+                            "value" : 4
+                        }
+                    ]
+                },
+                 {
+                    "list_name" : "Frequency",
+                    "list_pk_id" : 2,
+                    "tus_infor": [
+                        {    
+                            "name" : "T2040L3R011-1",
+                            "value" : 1
+                        },
+                        {    
+                            "name" : "T2040L3R011-2",
+                            "value" : 2
+                        },
+                        {    
+                            "name" : "T2040L3R011-3",
+                            "value" : 3
+                        },
+                        {    
+                            "name" : "T2040L3R011-4",
+                            "value" : 4
+                        }
+                    ]
+                }
+            ]
         }
-        return $this->json($response);
-    }
+    ]
+}
