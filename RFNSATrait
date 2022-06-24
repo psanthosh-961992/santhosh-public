@@ -1,9 +1,3 @@
-<?php
-
-namespace App\Traits;
-
-use App\Helpers\Constants;
-use Symfony\Component\Console\Input\Input;
 
 trait RFNSATrait{
 
@@ -23,7 +17,7 @@ trait RFNSATrait{
                         $no_of_tus += $antenna['no_of_tus'];
                   }
                   foreach($sector['list_infor'] as $list_infor){
-                        if($no_of_tus != count($list_infor['tus_infor'])){
+                        if($no_of_tus != count($list_infor['tus'])){
                               return false;
                         }
                   }
@@ -32,16 +26,15 @@ trait RFNSATrait{
       }
 
       public function getFormulaBasedValues($antenna_tu = '', $list_infor = [], $formula_req_elements = []){
+           
             $req_array = [];
             foreach($formula_req_elements as $formula_list_name){
                   foreach($list_infor as $list_item){
                         if($list_item['list_name'] == $formula_list_name){
-                              foreach($list_item['tus_infor'] as $dev){
-                                    foreach($dev as $key => $value){
-                                          if($key == $antenna_tu){
-                                                $req_array[$formula_list_name] =  $value;
-                                                break;
-                                          }
+                              foreach($list_item['tus'] as $dev){
+                                    if($dev['name'] == $antenna_tu){
+                                          $req_array[$formula_list_name] = $dev['value'] ;
+                                          break;
                                     }
                                 }
                         }
@@ -51,6 +44,7 @@ trait RFNSATrait{
       }
 
       public function ConnectorLossCalculator($antenna_tu = '', $list_infor = []){
+     
             /* 
                   Formula Designed List Items
 
@@ -63,7 +57,6 @@ trait RFNSATrait{
            
             $req_array = $this->getFormulaBasedValues($antenna_tu, $list_infor, $formula_req_elements);
             
-            // dd($req_array);
 
             $sub_formula_1 = $sub_formula_2 = $sub_formula_3 = $sub_formula_4 = $sub_formula_5 = '';
             
@@ -104,6 +97,5 @@ trait RFNSATrait{
             }
 
       }
-    
 
 }
