@@ -1,8 +1,4 @@
-
-trait RFNSATrait{
-
-
-      public function validateRFNSAData($input = []){
+ public function validateRFNSAData($input = []){
            //dd($input);
             $sectors = $input['sectors'];
             foreach($sectors as $sector){
@@ -55,6 +51,16 @@ trait RFNSATrait{
                   }
             }
             return $req_array;
+      }
+
+      public function excelVLookUpCalculation($searching_for, $searching_column_name, $required_col_name, $data_list = []){
+            $response = null;
+            foreach($data_list as $data){
+                  if(strtolower(trim($data[$required_col_name])) == strtolower(trim($searching_for))){
+                        return $data[$required_col_name];
+                  }
+            }
+            return $response;
       }
 
       public function ConnectorLossCalculator($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
@@ -125,6 +131,3 @@ trait RFNSATrait{
             $req_array = array_merge($req_array,$this->getFormulaBasedCalculatedValues($antenna_tu, $existed_calculated_values, $formula_dependent_req_elements));
             
       }
-
-}
-
