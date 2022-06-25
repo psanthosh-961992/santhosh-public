@@ -1,22 +1,20 @@
 
-trait RFNSATrait{
-
 
       public function validateRFNSAData($input = []){
            //dd($input);
             $sectors = $input['sectors'];
             foreach($sectors as $sector){
                   /* Antenna Information Validation */
-                  if($sector['no_of_antennas'] != count($sector['antenna_infor'][0]['antenna_model'])){
+                  if($sector['no_of_antennas'] != count($sector['antenna_info'][0]['antenna_model'])){
                         return false;
                   }
 
                   /*Antenna Information Count Validation */
                   $no_of_tus = 0;
-                  foreach($sector['antenna_infor'][0]['no_of_tus'] as $tus_count){
+                  foreach($sector['antenna_info'][0]['no_of_tus'] as $tus_count){
                         $no_of_tus += $tus_count;
                   }
-                  foreach($sector['list_infor'] as $list_infor){
+                  foreach($sector['list_info'] as $list_infor){
                         if($no_of_tus != count($list_infor['tus'])){
                               return false;
                         }
@@ -97,5 +95,3 @@ trait RFNSATrait{
             }
 
       }
-
-}
