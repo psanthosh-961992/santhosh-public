@@ -1,4 +1,6 @@
 
+trait RFNSATrait{
+
 
       public function validateRFNSAData($input = []){
            //dd($input);
@@ -41,7 +43,21 @@
             return $req_array;
       }
 
-      public function ConnectorLossCalculator($antenna_tu = '', $list_infor = []){
+      public function getFormulaBasedCalculatedValues($antenna_tu = '', $existed_calculated_values = [], $formula_dependent_req_elements = []){
+            $req_array = [];
+            foreach($formula_dependent_req_elements as $formula_calc_list_name){
+                  foreach($existed_calculated_values[0]['list_info'][$formula_calc_list_name] as $element){
+                        foreach($element as $key=>$value){
+                              if($key == $antenna_tu){
+                                    $req_array[$formula_calc_list_name] = $element[$formula_calc_list_name];
+                              }
+                        }
+                  }
+            }
+            return $req_array;
+      }
+
+      public function ConnectorLossCalculator($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
      
             /* 
                   Formula Designed List Items
@@ -95,3 +111,20 @@
             }
 
       }
+
+      public function ExistingEIRPCalculator($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
+            /* 
+                  Formula Designed List Items
+                  Independent Value => EXIST_FREQUENCY
+                  Existed Calculated Value => EXIST_ANTENNA_GAIN_DBI, EXIST_POWER_AT_THE_INPUT_OF_ANTENNA
+            */
+            $formula_req_elements = [Constants::EXIST_FREQUENCY];
+            $req_array = $this->getFormulaBasedValues($antenna_tu, $list_infor, $formula_req_elements);
+
+            $formula_dependent_req_elements = [Constants::EXIST_ANTENNA_GAIN_DBI,Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA];
+            $req_array = array_merge($req_array,$this->getFormulaBasedCalculatedValues($antenna_tu, $existed_calculated_values, $formula_dependent_req_elements));
+            
+      }
+
+}
+
