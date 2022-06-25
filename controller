@@ -1,4 +1,4 @@
- /**
+/**
      * @Route("/test", name="test")
      */
     public function index(Request $request): Response
@@ -15,7 +15,6 @@
                 $this->existingSectors($sector, $index, $response);
             }
             if($sector['type'] == 'proposed') {
-               
                 $this->proposedSectors($sector, $index, $response);
             }
             $index++;
@@ -30,8 +29,8 @@
         $response[$index]['sector_name'] = $sector['name'];
 
         $no_of_tus = 0;
-        foreach($sector['antenna_infor'] as $antenna){
-              $no_of_tus += $antenna['no_of_tus'];
+        foreach($sector['antenna_infor'][0]['no_of_tus'] as $tus_count){
+            $no_of_tus += $tus_count;
         }
         foreach($sector['list_infor'] as $list_infor){
             // $response[$index]['list_infor']['tus'] = $list_infor['tus'];
@@ -95,8 +94,8 @@
         $response[$index]['sector_name'] = $sector['name'];
       
         $no_of_tus = 0;
-        foreach($sector['antenna_infor'] as $antenna){
-              $no_of_tus += $antenna['no_of_tus'];
+        foreach($sector['antenna_infor'][0]['no_of_tus'] as $tus_count){
+            $no_of_tus += $tus_count;
         }
         foreach($sector['list_infor'] as $list_infor){
             // $response[$index]['list_infor']['tus'] = $list_infor['tus'];
@@ -237,4 +236,3 @@
 
       }
     }
-
