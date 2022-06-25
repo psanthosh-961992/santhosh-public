@@ -1,5 +1,4 @@
-
-    /**
+/**
      * @Route("/test", name="test")
      */
     public function index(Request $request): Response
@@ -39,7 +38,7 @@
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
                     $response[$index]['list_info'][Constants::EXIST_CONNECTOR_LOSS][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_CONNECTOR_LOSS][$loop][Constants::EXIST_CONNECTOR_LOSS] = $this->ConnectorLossCalculator($dev['name'],$sector['list_info']); 
+                    $response[$index]['list_info'][Constants::EXIST_CONNECTOR_LOSS][$loop][Constants::EXIST_CONNECTOR_LOSS] = $this->ConnectorLossCalculator($dev['name'],$sector['list_info'],$response); 
                     $loop++;
             }
 
@@ -55,15 +54,7 @@
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
                     $response[$index]['list_info'][Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA][$loop][Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA] = $dev['value'];
-                    $loop++;
-            }
-            
-            /* Existing EIRP Calculation */
-            $loop = 0;
-            foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::EXIST_EIRP][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_EIRP][$loop][Constants::EXIST_EIRP] =$dev['value'];
+                    $response[$index]['list_info'][Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA][$loop][Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA] = 200;
                     $loop++;
             }
             
@@ -72,9 +63,18 @@
              $loop = 0;
              foreach($list_infor['tus'] as $dev){
                     $response[$index]['list_info'][Constants::EXIST_ANTENNA_GAIN_DBI][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_ANTENNA_GAIN_DBI][$loop][Constants::EXIST_ANTENNA_GAIN_DBI] = $dev['value'];
+                    $response[$index]['list_info'][Constants::EXIST_ANTENNA_GAIN_DBI][$loop][Constants::EXIST_ANTENNA_GAIN_DBI] = 100;
                     $loop++;
              }
+
+
+            /* Existing EIRP Calculation */
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                    $response[$index]['list_info'][Constants::EXIST_EIRP][$loop][$dev['name']] = $dev['value'];
+                    $response[$index]['list_info'][Constants::EXIST_EIRP][$loop][Constants::EXIST_EIRP] =  $this->ExistingEIRPCalculator($dev['name'],$sector['list_info'],$response); 
+                    $loop++;
+            }
       }
     }
 
@@ -194,4 +194,3 @@
             }
       }
     }
-
