@@ -42,92 +42,17 @@
       public function getFormulaBasedCalculatedValues($antenna_tu = '', $existed_calculated_values = [], $formula_dependent_req_elements = []){
             $req_array = [];
             foreach($formula_dependent_req_elements as $formula_calc_list_name){
-                  foreach($existed_calculated_values[0]['list_info'][$formula_calc_list_name] as $element){
-                        foreach($element as $key=>$value){
-                              if($key == $antenna_tu){
-                                    $req_array[$formula_calc_list_name] = $element[$formula_calc_list_name];
+                  foreach($existed_calculated_values as $element){
+                        if($element['list_name'] ==  $formula_calc_list_name ){
+                              foreach($element['tus'] as $tu){
+                                    if($tu['name'] == $antenna_tu){
+                                          $req_array[$formula_calc_list_name] = $tu['value'];
+                                          break;
+                                    }
                               }
+                              break;
                         }
                   }
             }
             return $req_array;
-      }
-
-      public function excelVLookUpCalculation($searching_for, $searching_column_name, $required_col_name, $data_list = []){
-            $response = null;
-            foreach($data_list as $data){
-                  if(strtolower(trim($data[$required_col_name])) == strtolower(trim($searching_for))){
-                        return $data[$required_col_name];
-                  }
-            }
-            return $response;
-      }
-
-      public function ConnectorLossCalculator($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
-     
-            /* 
-                  Formula Designed List Items
-
-                  FEEDER_LENGTH, TAIL_SYS_INTERNAL, FREQUENCY, TAIL_SYS_INTERNAL_TOT_NUM, 
-                  TAIL_SYS_EXTERNAL, TAIL_SYS_EXTERNAL_TOT_NUM, FEEDER_TYPE 
-            */
-            $formula_req_elements = [Constants::EXIST_FEEDER_LENGTH,Constants::EXIST_TAIL_SYS_INTERNAL,Constants::EXIST_FREQUENCY,
-                                     Constants::EXIST_TAIL_SYS_INTERNAL_TOT_NUM,Constants::EXIST_TAIL_SYS_EXTERNAL,
-                                     Constants::EXIST_TAIL_SYS_EXTERNAL_TOT_NUM,Constants::EXIST_FEEDER_TYPE];
-           
-            $req_array = $this->getFormulaBasedValues($antenna_tu, $list_infor, $formula_req_elements);
-            
-
-            $sub_formula_1 = $sub_formula_2 = $sub_formula_3 = $sub_formula_4 = $sub_formula_5 = '';
-            
-            if($req_array[Constants::EXIST_TAIL_SYS_INTERNAL] == 'None'){
-                  $sub_formula_1 = 0;
-            } else {
-                  $sub_formula_1 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*($req_array[Constants::EXIST_TAIL_SYS_INTERNAL_TOT_NUM]*2);
-            }
-
-            if($req_array[Constants::EXIST_TAIL_SYS_EXTERNAL] == 'None'){
-                  $sub_formula_2 = 0;
-            } else {
-                  $sub_formula_2 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*($req_array[Constants::EXIST_TAIL_SYS_EXTERNAL_TOT_NUM]*2);
-            }
-
-            if($req_array[Constants::EXIST_TAIL_SYS_INTERNAL] == 'None'){
-                  $sub_formula_3 = 0;
-            } else {
-                  $sub_formula_3 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*($req_array[Constants::EXIST_TAIL_SYS_INTERNAL_TOT_NUM]*2);
-            }
-
-            if($req_array[Constants::EXIST_TAIL_SYS_EXTERNAL] == 'None'){
-                  $sub_formula_4 = 0;
-            } else {
-                  $sub_formula_4 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*($req_array[Constants::EXIST_TAIL_SYS_EXTERNAL_TOT_NUM]*2);
-            }
-
-            if($req_array[Constants::EXIST_FEEDER_TYPE] == 'None'){
-                  $sub_formula_5 = 0;
-            } else {
-                  $sub_formula_5 = (0.05*sqrt($req_array[Constants::EXIST_FREQUENCY]/1000))*(2);
-            }
-
-            if($req_array[Constants::EXIST_FEEDER_LENGTH] == 0){
-                  return ($sub_formula_1 + $sub_formula_2);
-            } else {
-                  return ($sub_formula_3 + $sub_formula_4 + $sub_formula_5);
-            }
-
-      }
-
-      public function ExistingEIRPCalculator($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
-            /* 
-                  Formula Designed List Items
-                  Independent Value => EXIST_FREQUENCY
-                  Existed Calculated Value => EXIST_ANTENNA_GAIN_DBI, EXIST_POWER_AT_THE_INPUT_OF_ANTENNA
-            */
-            $formula_req_elements = [Constants::EXIST_FREQUENCY];
-            $req_array = $this->getFormulaBasedValues($antenna_tu, $list_infor, $formula_req_elements);
-
-            $formula_dependent_req_elements = [Constants::EXIST_ANTENNA_GAIN_DBI,Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA];
-            $req_array = array_merge($req_array,$this->getFormulaBasedCalculatedValues($antenna_tu, $existed_calculated_values, $formula_dependent_req_elements));
-            
       }
