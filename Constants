@@ -1,4 +1,3 @@
-<?php
 
 namespace App\Helpers;
 
@@ -62,25 +61,44 @@ class Constants {
       
       /* Existing System Output Response Param Keys */
       const EXIST_CONNECTOR_LOSS = 'connector_loss';
+      const EXIST_CONNECTOR_LOSS_LIST_ID = 0;
       const EXIST_EXISTING_SYS_LOSS = 'existing_sys_loss';
+      const EXIST_EXISTING_SYS_LOSS_LIST_ID = 0;
       const EXIST_POWER_AT_THE_INPUT_OF_ANTENNA = 'power_at_the_input_of_antenna';
-      const EXIST_EIRP = 'EIRP';
+      const EXIST_POWER_AT_THE_INPUT_OF_ANTENNA_LIST_ID = 0;
       const EXIST_ANTENNA_GAIN_DBI = 'antenna_gain_dbi'; 
+      const EXIST_ANTENNA_GAIN_DBI_LIST_ID = 0;
+      const EXIST_EIRP = 'EIRP';
+      const EXIST_EIRP_LIST_ID = 0;
+    
 
       /* Proposed System Output Response Param Keys */
       const PROPOSED_CONNECTOR_LOSS = 'connector_loss';
+      const PROPOSED_CONNECTOR_LOSS_LIST_ID = 0;
       const PROPOSED_DL_SYS_LOSS = 'proposed_dl_sys_loss';
+      const PROPOSED_DL_SYS_LOSS_LIST_ID = 0;
       const PROPOSED_UL_SYS_LOSS = 'proposed_ul_sys_loss';
+      const PROPOSED_UL_SYS_LOSS_LIST_ID = 0;
       const PROPOSED_RX_ATT_SETTING = 'rx_att_setting';
+      const PROPOSED_RX_ATT_SETTING_LIST_ID = 0;
+      const PROPOSED_EXIST_SYS_LOSS_LIST_ID = 0;
       const PROPOSED_EXIST_SYS_LOSS = 'existing_sys_loss';
+      const PROPOSED_SYS_LOSS_DELTA_LIST_ID = 0;
       const PROPOSED_SYS_LOSS_DELTA = 'sys_loss_delta';
       const PROPOSED_EXISTING_ANTENNA_GAIN = 'existing_antenna_gain';///////////
+      const PROPOSED_EXISTING_ANTENNA_GAIN_LIST_ID = 0;
       const PROPOSED_ANTENNA_SYS_LOSS = 'antenna_sys_loss';
+      const PROPOSED_ANTENNA_SYS_LOSS_LIST_ID = 0;
       const PROPOSED_TOTAL_RACK_TO_POWER = 'total_rack_power';
+      const PROPOSED_TOTAL_RACK_TO_POWER_LIST_ID = 0;
       const PROPOSED_POWER_AT_INPUT = 'power_at_input';
+      const PROPOSED_POWER_AT_INPUT_LIST_ID = 0;
       const PROPOSED_EIRP = 'EIRP';
+      const PROPOSED_EIRP_LIST_ID = 0;
       const PROPOSED_EIRP_DELTA = 'EIRP_delta';
+      const PROPOSED_EIRP_DELTA_LIST_ID = 0;
       const PROPOSED_ANTENNA_GAIN_DBI = 'antenna_gain_dbi'; 
+      const PROPOSED_ANTENNA_GAIN_DBI_LIST_ID = 0;
 
 
 
