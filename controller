@@ -1,4 +1,6 @@
-/**
+
+
+    /**
      * @Route("/test", name="test")
      */
     public function index(Request $request): Response
@@ -26,7 +28,6 @@
 
 
     public function existingSectors(&$sector, &$index, &$response){
-        $response[$index]['sector_name'] = $sector['sector_name'];
 
         $no_of_tus = 0;
         foreach($sector['antenna_info'][0]['no_of_tus'] as $tus_count){
@@ -34,46 +35,64 @@
         }
         foreach($sector['list_info'] as $list_infor){
 
+            $list_index_loop = 0;
+
             /* Existing Connector Loss Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::EXIST_CONNECTOR_LOSS_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::EXIST_CONNECTOR_LOSS;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::EXIST_CONNECTOR_LOSS][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_CONNECTOR_LOSS][$loop][Constants::EXIST_CONNECTOR_LOSS] = $this->ConnectorLossCalculator($dev['name'],$sector['list_info'],$response); 
-                    $loop++;
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
             }
+
+            $list_index_loop++;
 
             /* Existing System Loss Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::EXIST_EXISTING_SYS_LOSS_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::EXIST_EXISTING_SYS_LOSS;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::EXIST_EXISTING_SYS_LOSS][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_EXISTING_SYS_LOSS][$loop][Constants::EXIST_EXISTING_SYS_LOSS] = $dev['value'];
-                    $loop++;
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
             }
+
+            $list_index_loop++;
             
             /* Existing Power At The Input of Antenna Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA][$loop][Constants::EXIST_POWER_AT_THE_INPUT_OF_ANTENNA] = 200;
-                    $loop++;
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
             }
+
+            $list_index_loop++;
             
             /* Existing Antenna Gain dBi */
-             $EIRP = [];
-             $loop = 0;
-             foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::EXIST_ANTENNA_GAIN_DBI][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_ANTENNA_GAIN_DBI][$loop][Constants::EXIST_ANTENNA_GAIN_DBI] = 100;
-                    $loop++;
-             }
-
-
-            /* Existing EIRP Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::EXIST_ANTENNA_GAIN_DBI_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::EXIST_ANTENNA_GAIN_DBI;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::EXIST_EIRP][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::EXIST_EIRP][$loop][Constants::EXIST_EIRP] =  $this->ExistingEIRPCalculator($dev['name'],$sector['list_info'],$response); 
-                    $loop++;
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+
+            /* Existing EIRP Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::EXIST_EIRP_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::EXIST_EIRP;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
             }
       }
     }
@@ -81,116 +100,167 @@
 
 
     public function proposedSectors(&$sector, &$index, &$response){
-        $response[$index]['sector_name'] = $sector['sector_name'];
       
         $no_of_tus = 0;
         foreach($sector['antenna_info'][0]['no_of_tus'] as $tus_count){
             $no_of_tus += $tus_count;
         }
         foreach($sector['list_info'] as $list_infor){
-            // $response[$index]['list_info']['tus'] = $list_infor['tus'];
+           
+            $list_index_loop = 0;
 
             /* Proposed Connector Loss Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_CONNECTOR_LOSS_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_CONNECTOR_LOSS;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                $response[$index]['list_info'][Constants::PROPOSED_CONNECTOR_LOSS][$loop][$dev['name']] = $dev['value'];
-                $response[$index]['list_info'][Constants::PROPOSED_CONNECTOR_LOSS][$loop][Constants::PROPOSED_CONNECTOR_LOSS] = $dev['value'];
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
                 $loop++;
             }
+
+            $list_index_loop++;
 
             /* Proposed DL SYS Loss Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_DL_SYS_LOSS_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_DL_SYS_LOSS;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                $response[$index]['list_info'][Constants::PROPOSED_DL_SYS_LOSS][$loop][$dev['name']] = $dev['value'];
-                $response[$index]['list_info'][Constants::PROPOSED_DL_SYS_LOSS][$loop][Constants::PROPOSED_DL_SYS_LOSS] = $dev['value'];
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
                 $loop++;
             }
+
+            $list_index_loop++;
 
             /* Proposed UL SYS Loss Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_UL_SYS_LOSS_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_UL_SYS_LOSS;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                $response[$index]['list_info'][Constants::PROPOSED_UL_SYS_LOSS][$loop][$dev['name']] = $dev['value'];
-                $response[$index]['list_info'][Constants::PROPOSED_UL_SYS_LOSS][$loop][Constants::PROPOSED_UL_SYS_LOSS] = $dev['value'];
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
                 $loop++;
             }
+
+            $list_index_loop++;
 
             /* PROPOSED_RX_ATT_SETTING Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_RX_ATT_SETTING_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_RX_ATT_SETTING;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_RX_ATT_SETTING][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_RX_ATT_SETTING][$loop][Constants::PROPOSED_RX_ATT_SETTING] = $dev['value'];
-                    $loop++;
-            }
-            
-             /* PROPOSED_EXIST_SYS_LOSS Calculation */
-             $loop = 0;
-             foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_EXIST_SYS_LOSS][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_EXIST_SYS_LOSS][$loop][Constants::PROPOSED_EXIST_SYS_LOSS] = $dev['value'];
-                    $loop++;
-             }
-              /* PROPOSED_SYS_LOSS_DELTA Calculation */
-              $loop = 0;
-              foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_SYS_LOSS_DELTA][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_SYS_LOSS_DELTA][$loop][Constants::PROPOSED_SYS_LOSS_DELTA] = $dev['value'];
-                    $loop++;
-              }
-            
-              /* PROPOSED_EXISTING_ANTENNA_GAIN Calculation */
-              $loop = 0;
-              foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_EXISTING_ANTENNA_GAIN][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_EXISTING_ANTENNA_GAIN][$loop][Constants::PROPOSED_EXISTING_ANTENNA_GAIN] = $dev['value'];
-                    $loop++;
-              }
-
-              /* PROPOSED_ANTENNA_SYS_LOSS Calculation */
-              $loop = 0;
-              foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_ANTENNA_SYS_LOSS][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_ANTENNA_SYS_LOSS][$loop][Constants::PROPOSED_ANTENNA_SYS_LOSS] = $dev['value'];
-                    $loop++;
-              }
-
-              /* PROPOSED_TOTAL_RACK_TO_POWER Calculation */
-              $loop = 0;
-              foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_TOTAL_RACK_TO_POWER][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_TOTAL_RACK_TO_POWER][$loop][Constants::PROPOSED_TOTAL_RACK_TO_POWER] = $dev['value'];
-                    $loop++;
-              }
-
-              /* PROPOSED_POWER_AT_INPUT Calculation */
-              $loop = 0;
-              foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_POWER_AT_INPUT][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_POWER_AT_INPUT][$loop][Constants::PROPOSED_POWER_AT_INPUT] = $dev['value'];
-                    $loop++;
-              }
-
-            /* PROPOSED_EIRP Calculation */
-              $loop = 0;
-              foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_EIRP][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_EIRP][$loop][Constants::PROPOSED_EIRP] = $dev['value'];
-                    $loop++;
-              }
-
-            /* PROPOSED_EIRP_DELTA Calculation */
-            $loop = 0;
-            foreach($list_infor['tus'] as $dev){
-                $response[$index]['list_info'][Constants::PROPOSED_EIRP_DELTA][$loop][$dev['name']] = $dev['value'];
-                $response[$index]['list_info'][Constants::PROPOSED_EIRP_DELTA][$loop][Constants::PROPOSED_EIRP_DELTA] = $dev['value'];
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
                 $loop++;
             }
 
-            /* PROPOSED_ANTENNA_GAIN_DBI Calculation */
+            $list_index_loop++;
+
+             /* PROPOSED_EXIST_SYS_LOSS Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_EXIST_SYS_LOSS_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_EXIST_SYS_LOSS;
             $loop = 0;
             foreach($list_infor['tus'] as $dev){
-                    $response[$index]['list_info'][Constants::PROPOSED_ANTENNA_GAIN_DBI][$loop][$dev['name']] = $dev['value'];
-                    $response[$index]['list_info'][Constants::PROPOSED_ANTENNA_GAIN_DBI][$loop][Constants::PROPOSED_ANTENNA_GAIN_DBI] = $dev['value'];
-                    $loop++;
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+
+            /* PROPOSED_SYS_LOSS_DELTA Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_SYS_LOSS_DELTA_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_SYS_LOSS_DELTA;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+
+            /* PROPOSED_EXISTING_ANTENNA_GAIN Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_EXISTING_ANTENNA_GAIN_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_EXISTING_ANTENNA_GAIN;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+            
+            /* PROPOSED_ANTENNA_SYS_LOSS Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_ANTENNA_SYS_LOSS_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_ANTENNA_SYS_LOSS;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+
+            /* PROPOSED_TOTAL_RACK_TO_POWER Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_TOTAL_RACK_TO_POWER_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_TOTAL_RACK_TO_POWER;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+
+            /* PROPOSED_POWER_AT_INPUT Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_POWER_AT_INPUT_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_POWER_AT_INPUT;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+
+            /* PROPOSED_EIRP Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_EIRP_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_EIRP;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+
+            /* PROPOSED_EIRP_DELTA Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_EIRP_DELTA_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_EIRP_DELTA;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
+            }
+
+            $list_index_loop++;
+
+            /* PROPOSED_ANTENNA_GAIN_DBI Calculation */
+            $response[$list_index_loop]['list_pk_id'] = Constants::PROPOSED_ANTENNA_GAIN_DBI_LIST_ID;
+            $response[$list_index_loop]['list_name'] = Constants::PROPOSED_ANTENNA_GAIN_DBI;
+            $loop = 0;
+            foreach($list_infor['tus'] as $dev){
+                $response[$list_index_loop]['tus'][$loop]['name'] = $dev['name'];
+                $response[$list_index_loop]['tus'][$loop]['value'] = $dev['value'];
+                $loop++;
             }
       }
     }
