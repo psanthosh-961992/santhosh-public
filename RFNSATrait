@@ -1,58 +1,21 @@
- public function validateRFNSAData($input = []){
-           //dd($input);
-            $sectors = $input['sectors'];
-            foreach($sectors as $sector){
-                  /* Antenna Information Validation */
-                  if($sector['no_of_antennas'] != count($sector['antenna_info'][0]['antenna_model'])){
-                        return false;
-                  }
-
-                  /*Antenna Information Count Validation */
-                  $no_of_tus = 0;
-                  foreach($sector['antenna_info'][0]['no_of_tus'] as $tus_count){
-                        $no_of_tus += $tus_count;
-                  }
-                  foreach($sector['list_info'] as $list_infor){
-                        if($no_of_tus != count($list_infor['tus'])){
-                              return false;
-                        }
-                  }
-            }
-            return true;
-      }
-
-      public function getFormulaBasedValues($antenna_tu = '', $list_infor = [], $formula_req_elements = []){
-           
-            $req_array = [];
-            foreach($formula_req_elements as $formula_list_name){
-                  foreach($list_infor as $list_item){
-                        if($list_item['list_name'] == $formula_list_name){
-                              foreach($list_item['tus'] as $dev){
-                                    if($dev['name'] == $antenna_tu){
-                                          $req_array[$formula_list_name] = $dev['value'] ;
-                                          break;
+      public function ResetRFNSAData(&$input){
+            if(isset($input['sectors'])) {
+                  $sector_index = 0;
+                  foreach($input['sectors'] as $sector) {
+                        if(isset($sector['list_info'])) {
+                              $list_index =  0;
+                              foreach($sector['list_info'] as $list_info){
+                                    $tu_index = 0;
+                                    foreach($list_info['tus'] as $tu) {
+                                          if(trim($tu['value']) == '' || $tu['value'] == null ) {
+                                                $input['sectors'][$sector_index]['list_info'][$list_index]['tus'][$tu_index]['value'] = 0 ;
+                                          }
+                                          $tu_index++;
                                     }
-                                }
-                        }
-                  }
-            }
-            return $req_array;
-      }
-
-      public function getFormulaBasedCalculatedValues($antenna_tu = '', $existed_calculated_values = [], $formula_dependent_req_elements = []){
-            $req_array = [];
-            foreach($formula_dependent_req_elements as $formula_calc_list_name){
-                  foreach($existed_calculated_values as $element){
-                        if($element['list_name'] ==  $formula_calc_list_name ){
-                              foreach($element['tus'] as $tu){
-                                    if($tu['name'] == $antenna_tu){
-                                          $req_array[$formula_calc_list_name] = $tu['value'];
-                                          break;
-                                    }
+                                    $list_index++;
                               }
-                              break;
                         }
+                        $sector_index++;
                   }
             }
-            return $req_array;
       }
