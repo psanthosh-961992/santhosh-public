@@ -1,241 +1,61 @@
-[
+{
+  "sectors": [
     {
-        "sector_name": "sector1",
-        "proposed_antenna_values": [
+      "sector_name": "sector1",
+      "type": "existing",
+      "no_of_antennas": 2,
+      "antenna_info": [
+        {
+          "antenna_model": [
+            "T2040L3R011",
+            "T2040L3R012"
+          ],
+          "no_of_tus": [
+            2,
+            1
+          ]
+        }
+      ],
+      "list_info": [
+        {
+          "list_pk_id": 1,
+          "list_name": "port_num",
+          "tus": [
             {
-                "list_pk_id": 0,
-                "list_name": "connector_loss",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
+              "name": "T2040L3R011-1",
+              "value": null
             },
             {
-                "list_pk_id": 0,
-                "list_name": "proposed_dl_sys_loss",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
+              "name": "T2040L3R011-2",
+              "value": ""
             },
             {
-                "list_pk_id": 0,
-                "list_name": "proposed_ul_sys_loss",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "rx_att_setting",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "existing_sys_loss",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "sys_loss_delta",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "existing_antenna_gain",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "antenna_sys_loss",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "total_rack_power",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "power_at_input",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "EIRP",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "EIRP_delta",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
-            },
-            {
-                "list_pk_id": 0,
-                "list_name": "antenna_gain_dbi",
-                "tus": [
-                    {
-                        "name": "T2040L3R011-1",
-                        "value": "1"
-                    },
-                    {
-                        "name": "T2040L3R011-2",
-                        "value": "2"
-                    },
-                    {
-                        "name": "T2040L3R011-3",
-                        "value": "3"
-                    }
-                ]
+              "name": "T2040L3R011-3",
+              "value": "3"
             }
-        ]
+          ]
+        }
+      ],
+	  "existing_list_info": [
+        {
+          "list_pk_id": 1,
+          "list_name": "port_num",
+          "tus": [
+            {
+              "name": "T2040L3R011-1",
+              "value": null
+            },
+            {
+              "name": "T2040L3R011-2",
+              "value": ""
+            },
+            {
+              "name": "T2040L3R011-3",
+              "value": "3"
+            }
+          ]
+        }
+      ]
     }
-]
+  ]
+}
