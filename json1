@@ -1,61 +1,11 @@
-{
-  "sectors": [
-    {
-      "sector_name": "sector1",
-      "type": "existing",
-      "no_of_antennas": 2,
-      "antenna_info": [
-        {
-          "antenna_model": [
-            "T2040L3R011",
-            "T2040L3R012"
-          ],
-          "no_of_tus": [
-            2,
-            1
-          ]
-        }
-      ],
-      "list_info": [
-        {
-          "list_pk_id": 1,
-          "list_name": "port_num",
-          "tus": [
-            {
-              "name": "T2040L3R011-1",
-              "value": null
-            },
-            {
-              "name": "T2040L3R011-2",
-              "value": ""
-            },
-            {
-              "name": "T2040L3R011-3",
-              "value": "3"
+public function matchInformation($lookup_value , $lookup_array = []){
+            $req_value = 0;
+            foreach($lookup_array as $value){
+                  if($value == $lookup_value){
+                        $req_value++;
+                        break;
+                  }
+                  $req_value++;
             }
-          ]
-        }
-      ],
-	  "existing_list_info": [
-        {
-          "list_pk_id": 1,
-          "list_name": "port_num",
-          "tus": [
-            {
-              "name": "T2040L3R011-1",
-              "value": null
-            },
-            {
-              "name": "T2040L3R011-2",
-              "value": ""
-            },
-            {
-              "name": "T2040L3R011-3",
-              "value": "3"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+            return $req_value++;
+      }
