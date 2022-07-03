@@ -1,11 +1,46 @@
-public function matchInformation($lookup_value , $lookup_array = []){
-            $req_value = 0;
-            foreach($lookup_array as $value){
-                  if($value == $lookup_value){
-                        $req_value++;
-                        break;
+ public function proposedExistingSysLossCalculation($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
+
+            $req_list_info = [Constants::PROPOSED_FREQUENCY, 'EXISTING_INFOR_'.Constants::EXIST_FREQUENCY, 'EXISTING_INFOR_'.Constants::EXIST_EXISTING_SYS_LOSS];
+            $identification = 0;
+            $req_array = [];
+            $tuindex = 0;
+            foreach($req_list_info as $formula_list_name){
+                  foreach($list_infor as $list_item){
+                        if($list_item['list_name'] == $formula_list_name){
+                              $identification++;
+                              $index = 0;
+                              $req_array[$tuindex]['list_name'] = $formula_list_name;
+                              foreach($list_item['tus'] as $dev){
+                                    $req_array[$tuindex]['info'][$index]['name'] = $dev['name'];
+                                    $req_array[$tuindex]['info'][$index]['value'] = $dev['value'];
+                                    $index++;
+                              }
+                              $tuindex++;
+                        }
                   }
-                  $req_value++;
             }
-            return $req_value++;
+            $req_value = 'N/A';
+            if(isset($req_array[0]['list_name']) && $req_array[0]['list_name'] == Constants::PROPOSED_FREQUENCY){
+                  $tu_index = 0;
+                  foreach($req_array[0]['info'] as $tu_info ){
+                        $frequency = $tu_info['value'];
+                        if($tu_info['name'] == $antenna_tu){
+                              foreach($req_array as $list_info){
+                                    if($list_info['list_name'] == 'EXISTING_INFOR_'.Constants::EXIST_FREQUENCY){
+                                          $compare_index = 0;
+                                          foreach($list_info['info'] as $compare_tu){
+                                                // dd($compare_tu);
+                                                if($compare_tu['value'] == $frequency){
+                                                      $req_value = $req_array[2]['info'][$compare_index]['value'];
+                                                      break;
+                                                }
+                                                $compare_index++;
+                                          }
+                                    }
+                              }
+                        }
+                        $tu_index++;
+                  }
+            }
+            return $req_value;
       }
