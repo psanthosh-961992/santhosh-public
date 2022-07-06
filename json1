@@ -1,4 +1,4 @@
- public function proposedExistingSysLossCalculation($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
+public function proposedExistingSysLossCalculation($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
 
             $req_list_info = [Constants::PROPOSED_FREQUENCY, 'EXISTING_INFOR_'.Constants::EXIST_FREQUENCY, 'EXISTING_INFOR_'.Constants::EXIST_EXISTING_SYS_LOSS];
             $identification = 0;
