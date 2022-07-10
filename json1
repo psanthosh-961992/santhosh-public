@@ -1,46 +1,88 @@
-public function proposedExistingSysLossCalculation($antenna_tu = '', $list_infor = [], $existed_calculated_values = []){
-
-            $req_list_info = [Constants::PROPOSED_FREQUENCY, 'EXISTING_INFOR_'.Constants::EXIST_FREQUENCY, 'EXISTING_INFOR_'.Constants::EXIST_EXISTING_SYS_LOSS];
-            $identification = 0;
+ public function index(Request $request): Response
+    {
+        $request = json_decode($request->getContent(),true);
+        $main_array = $existing =  $proposed = [];
+        if(isset($request['data']['existing'])){
+            $existing = $this->getExistingAntennaGrid($request['data']['existing']);
+        }
+        if(isset($request['data']['proposed'])){
+            $proposed = $this->getProposedAntennaGrid($request['data']['proposed']);
+        }
+        return $this->json(array_merge($existing,$proposed));
+    }
+    
+    
+    
+     public function getExistingAntennaGrid($request = []){
             $req_array = [];
-            $tuindex = 0;
-            foreach($req_list_info as $formula_list_name){
-                  foreach($list_infor as $list_item){
-                        if($list_item['list_name'] == $formula_list_name){
-                              $identification++;
-                              $index = 0;
-                              $req_array[$tuindex]['list_name'] = $formula_list_name;
-                              foreach($list_item['tus'] as $dev){
-                                    $req_array[$tuindex]['info'][$index]['name'] = $dev['name'];
-                                    $req_array[$tuindex]['info'][$index]['value'] = $dev['value'];
-                                    $index++;
-                              }
-                              $tuindex++;
-                        }
+            $no_of_sectors = $request['no_of_sectors'];
+            $no_of_antenna_values = $request['existing_antenna_values'];
+            $no_of_tus = [];
+            $index = 0;
+            foreach($request['sector_info'] as $sector) {
+                  foreach($sector['Antenna_Model'] as $model) {
+                        $no_of_tus[] = $model;
                   }
-            }
-            $req_value = 'N/A';
-            if(isset($req_array[0]['list_name']) && $req_array[0]['list_name'] == Constants::PROPOSED_FREQUENCY){
+                  $titles = [];
+                  foreach($request['existing_antenna_values'] as $list_infor) {
+                        $titles[] = $list_infor['list_name'];
+                  }
+                  $req_array[$index]['titles'] = array_unique($titles);
+                  $req_array[$index]['tus_count'] = count($sector['Antenna_Model']);
+                  $req_array[$index]['sector'] = $sector['name'];
+
                   $tu_index = 0;
-                  foreach($req_array[0]['info'] as $tu_info ){
-                        $frequency = $tu_info['value'];
-                        if($tu_info['name'] == $antenna_tu){
-                              foreach($req_array as $list_info){
-                                    if($list_info['list_name'] == 'EXISTING_INFOR_'.Constants::EXIST_FREQUENCY){
-                                          $compare_index = 0;
-                                          foreach($list_info['info'] as $compare_tu){
-                                                // dd($compare_tu);
-                                                if($compare_tu['value'] == $frequency){
-                                                      $req_value = $req_array[2]['info'][$compare_index]['value'];
-                                                      break;
-                                                }
-                                                $compare_index++;
-                                          }
+                  foreach($sector['Antenna_Model'] as $sector_tu) {
+                        $tu_information = [];
+                        foreach(array_column($request['existing_antenna_values'],'tus') as $tu){
+                              if($sector_tu == $tu[0]['name']){   
+                                    if(count($tu_information) == 0) {
+                                          $tu_information[] = $tu[0]['name'];          
                                     }
+                                $tu_information[] = $tu[0]['value'];
                               }
                         }
+                        $req_array[$index][$tu_index]['tu_information'] = $tu_information;
                         $tu_index++;
                   }
+                  $index++;
             }
-            return $req_value;
+            return $req_array; 
+      }
+
+      public function getProposedAntennaGrid($request = []){
+            $req_array = [];
+            $no_of_sectors = $request['no_of_sectors'];
+            $no_of_antenna_values = $request['existing_antenna_values'];
+            $no_of_tus = [];
+            $index = 0;
+            foreach($request['sector_info'] as $sector) {
+                  foreach($sector['Antenna_Model'] as $model) {
+                        $no_of_tus[] = $model;
+                  }
+                  $titles = [];
+                  foreach($request['existing_antenna_values'] as $list_infor) {
+                        $titles[] = $list_infor['list_name'];
+                  }
+                  $req_array[$index]['titles'] = array_unique($titles);
+                  $req_array[$index]['tus_count'] = count($sector['Antenna_Model']);
+                  $req_array[$index]['sector'] = $sector['name'];
+
+                  $tu_index = 0;
+                  foreach($sector['Antenna_Model'] as $sector_tu) {
+                        $tu_information = [];
+                        foreach(array_column($request['existing_antenna_values'],'tus') as $tu){
+                              if($sector_tu == $tu[0]['name']){   
+                                    if(count($tu_information) == 0) {
+                                          $tu_information[] = $tu[0]['name'];          
+                                    }
+                                $tu_information[] = $tu[0]['value'];
+                              }
+                        }
+                        $req_array[$index][$tu_index]['tu_information'] = $tu_information;
+                        $tu_index++;
+                  }
+                  $index++;
+            }
+            return $req_array; 
       }
