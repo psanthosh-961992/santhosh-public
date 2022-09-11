@@ -1,88 +1,18 @@
- public function index(Request $request): Response
-    {
-        $request = json_decode($request->getContent(),true);
-        $main_array = $existing =  $proposed = [];
-        if(isset($request['data']['existing'])){
-            $existing = $this->getExistingAntennaGrid($request['data']['existing']);
-        }
-        if(isset($request['data']['proposed'])){
-            $proposed = $this->getProposedAntennaGrid($request['data']['proposed']);
-        }
-        return $this->json(array_merge($existing,$proposed));
-    }
-    
-    
-    
-     public function getExistingAntennaGrid($request = []){
+ public function getFormulaBasedValues($antenna_tu = '', $list_infor = [], $formula_req_elements = []){
             $req_array = [];
-            $no_of_sectors = $request['no_of_sectors'];
-            $no_of_antenna_values = $request['existing_antenna_values'];
-            $no_of_tus = [];
-            $index = 0;
-            foreach($request['sector_info'] as $sector) {
-                  foreach($sector['Antenna_Model'] as $model) {
-                        $no_of_tus[] = $model;
-                  }
-                  $titles = [];
-                  foreach($request['existing_antenna_values'] as $list_infor) {
-                        $titles[] = $list_infor['list_name'];
-                  }
-                  $req_array[$index]['titles'] = array_unique($titles);
-                  $req_array[$index]['tus_count'] = count($sector['Antenna_Model']);
-                  $req_array[$index]['sector'] = $sector['name'];
-
-                  $tu_index = 0;
-                  foreach($sector['Antenna_Model'] as $sector_tu) {
-                        $tu_information = [];
-                        foreach(array_column($request['existing_antenna_values'],'tus') as $tu){
-                              if($sector_tu == $tu[0]['name']){   
-                                    if(count($tu_information) == 0) {
-                                          $tu_information[] = $tu[0]['name'];          
+            foreach($formula_req_elements as $formula_list_name){
+                  foreach($list_infor as $list_item){
+                        if($list_item['list_name'] == $formula_list_name){
+                              $loop = 0;
+                              foreach($list_item['tus'] as $dev){
+                                    if($dev['name'].$loop == $antenna_tu){
+                                          $req_array[$formula_list_name] = $dev['value'] ;
+                                          break;
                                     }
-                                $tu_information[] = $tu[0]['value'];
+                                    $loop++;
                               }
                         }
-                        $req_array[$index][$tu_index]['tu_information'] = $tu_information;
-                        $tu_index++;
                   }
-                  $index++;
             }
-            return $req_array; 
-      }
-
-      public function getProposedAntennaGrid($request = []){
-            $req_array = [];
-            $no_of_sectors = $request['no_of_sectors'];
-            $no_of_antenna_values = $request['existing_antenna_values'];
-            $no_of_tus = [];
-            $index = 0;
-            foreach($request['sector_info'] as $sector) {
-                  foreach($sector['Antenna_Model'] as $model) {
-                        $no_of_tus[] = $model;
-                  }
-                  $titles = [];
-                  foreach($request['existing_antenna_values'] as $list_infor) {
-                        $titles[] = $list_infor['list_name'];
-                  }
-                  $req_array[$index]['titles'] = array_unique($titles);
-                  $req_array[$index]['tus_count'] = count($sector['Antenna_Model']);
-                  $req_array[$index]['sector'] = $sector['name'];
-
-                  $tu_index = 0;
-                  foreach($sector['Antenna_Model'] as $sector_tu) {
-                        $tu_information = [];
-                        foreach(array_column($request['existing_antenna_values'],'tus') as $tu){
-                              if($sector_tu == $tu[0]['name']){   
-                                    if(count($tu_information) == 0) {
-                                          $tu_information[] = $tu[0]['name'];          
-                                    }
-                                $tu_information[] = $tu[0]['value'];
-                              }
-                        }
-                        $req_array[$index][$tu_index]['tu_information'] = $tu_information;
-                        $tu_index++;
-                  }
-                  $index++;
-            }
-            return $req_array; 
+            return $req_array;
       }
