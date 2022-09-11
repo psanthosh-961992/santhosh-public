@@ -1,0 +1,1849 @@
+{
+  "ebp_sum_fkid": 68,
+  "sectors": [
+    {
+      "type": "existing",
+      "no_of_sectors": 3,
+      "sector_name": "sector1",
+      "no_of_antennas": 4,
+      "antenna_info": [
+        {
+          "antenna_model": [
+            "800 10123",
+            "AEQE",
+            "RR2VV-6533D-R6",
+            "RRV4-65D-R6"
+          ],
+          "no_of_tus": [
+            4,
+            1,
+            6,
+            5
+          ]
+        }
+      ],
+      "list_info": [
+        {
+          "list_pkid": 1,
+          "list_name": "Port Number (Port-pair identities per Frequency)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "3"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 2,
+          "list_name": "Frequency",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "2100"
+            },
+            {
+              "name": "800 10123",
+              "value": "1800"
+            },
+            {
+              "name": "800 10123",
+              "value": "3600"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": "2100"
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": "2600"
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 3,
+          "list_name": "Carrier Using Ports",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "Vodafone"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 4,
+          "list_name": "Orientation (degrees)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "30"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 5,
+          "list_name": "Electrical Down Tilt (degrees)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "4"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 6,
+          "list_name": "Mechanical Tilt (degrees)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "5"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 7,
+          "list_name": "Mounting Height (Metres above ground level)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 8,
+          "list_name": "RET on Antenna",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "Yes"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 9,
+          "list_name": "Feeder Size",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "1/2\""
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 10,
+          "list_name": "Feeder Type",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "SUCOFEED_1/2"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 11,
+          "list_name": "Feeder Length (metres)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "10"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 12,
+          "list_name": "Re-used Feeder",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "No"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 13,
+          "list_name": "Tail System (internal)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "1/2\" Superflex"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 14,
+          "list_name": "Tail System (internal) Total Length",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "10"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 15,
+          "list_name": "Tail System (internal) Total Number",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "10"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 16,
+          "list_name": "Tail System (external)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "1/2\" Superflex"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 17,
+          "list_name": "Tail System (external) Total Length",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "10"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 18,
+          "list_name": "Tail System (external) Total Number",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "15"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "list_pkid": 19,
+          "list_name": "Combiner/Filter 1",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "DBC0055F1V25-2"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 20,
+          "list_name": "Combiner/Filter 2",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "E15V90P44"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 21,
+          "list_name": "Combiner/Filter 3",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 22,
+          "list_name": "Combiner/Filter 4",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "D08C99P0300"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 23,
+          "list_name": "Combiner/Filter 5",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 24,
+          "list_name": "DC Stops",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "5"
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 25,
+          "list_name": "TMA",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "800 10123",
+              "value": null
+            },
+            {
+              "name": "AEQE",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": null
+            }
+          ]
+        },
+        {
+          "list_pkid": 26,
+          "list_name": "Total Rack To Power (W)(per Carrier)",
+          "tus": [
+            {
+              "name": "800 10123",
+              "value": "40"
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "800 10123",
+              "value": ""
+            },
+            {
+              "name": "AEQE",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RR2VV-6533D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            },
+            {
+              "name": "RRV4-65D-R6",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
