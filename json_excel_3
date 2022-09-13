@@ -1,0 +1,1641 @@
+{
+  "ebp_sum_fkid": "463",
+  "existing": {
+    "no_of_sectors": 3,
+    "sector_info": [
+      {
+        "name": "sector1",
+        "no_of_antennas": 1,
+        "no_of_tus": [
+          1
+        ],
+        "Antenna_Model": [
+          "RRZZVVT4S4-65D-R8 [Service Beam]"
+        ],
+        "Antenna_Type": [
+          [
+            "Optus"
+          ]
+        ]
+      },
+      {
+        "name": "sector2",
+        "no_of_antennas": 3,
+        "Antenna_Model": [
+          "0709/U-65-17/18-DV8C-B1",
+          "10692V01",
+          "739620"
+        ],
+        "no_of_tus": [
+          1,
+          2,
+          2
+        ],
+        "Antenna_Type": [
+          "Shared",
+          "Dedicated",
+          "Shared"
+        ]
+      },
+      {
+        "name": "sector3",
+        "no_of_antennas": 1,
+        "Antenna_Model": [
+          "739620"
+        ],
+        "no_of_tus": [
+          2
+        ],
+        "Antenna_Type": [
+          "Shared"
+        ]
+      }
+    ],
+    "existing_antenna_values": [
+      {
+        "list_pkid": 1,
+        "list_name": "Port Number (Port-pair identities per Frequency)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 2,
+        "list_name": "Frequency",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "700"
+          }
+        ]
+      },
+      {
+        "list_pkid": 3,
+        "list_name": "Carrier Using Ports",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "Optus"
+          }
+        ]
+      },
+      {
+        "list_pkid": 4,
+        "list_name": "Orientation (degrees)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "12"
+          }
+        ]
+      },
+      {
+        "list_pkid": 5,
+        "list_name": "Electrical Down Tilt (degrees)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 6,
+        "list_name": "Mechanical Tilt (degrees)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 7,
+        "list_name": "Mounting Height (Metres above ground level)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 8,
+        "list_name": "RET on Antenna",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 9,
+        "list_name": "Feeder Size",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "1/2\""
+          }
+        ]
+      },
+      {
+        "list_pkid": 10,
+        "list_name": "Feeder Type",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "SUCOFEED_1/2"
+          }
+        ]
+      },
+      {
+        "list_pkid": 11,
+        "list_name": "Feeder Length (metres)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "22"
+          }
+        ]
+      },
+      {
+        "list_pkid": 12,
+        "list_name": "Re-used Feeder",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 13,
+        "list_name": "Tail System (internal)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 14,
+        "list_name": "Tail System (internal) Total Length",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 15,
+        "list_name": "Tail System (internal) Total Number",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "list_pkid": 16,
+        "list_name": "Tail System (external)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 17,
+        "list_name": "Tail System (external) Total Length",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "list_pkid": 18,
+        "list_name": "Tail System (external) Total Number",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 19,
+        "list_name": "Combiner/Filter 1",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "E15V90P44"
+          }
+        ]
+      },
+      {
+        "list_pkid": 20,
+        "list_name": "Combiner/Filter 2",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 21,
+        "list_name": "Combiner/Filter 3",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 22,
+        "list_name": "Combiner/Filter 4",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 23,
+        "list_name": "Combiner/Filter 5",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 24,
+        "list_name": "DC Stops",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 25,
+        "list_name": "TMA",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 26,
+        "list_name": "Total Rack To Power (W)(per Carrier)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "22"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1306,
+        "list_name": "Antenna Gain dBi",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "N/A"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1307,
+        "list_name": "Connector Loss",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "list_pkid": 1308,
+        "list_name": "Existing System loss,BTS to Antenna(dB)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1309,
+        "list_name": "Power at the input of Antenna(dBm) (System Losses included)/STAD",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": 42.424226808222066
+          }
+        ]
+      },
+      {
+        "list_pkid": 1310,
+        "list_name": "EIRP(dBm)",
+        "tus": [
+          {
+            "name": "RRZZVVT4S4-65D-R8 [Service Beam]",
+            "value": 42.424226808222066
+          }
+        ]
+      },
+      {
+        "list_pkid": 27,
+        "list_name": "Port Number (Port-pair identities per Frequency)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "1"
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": "77"
+          },
+          {
+            "name": "739620",
+            "value": "7"
+          }
+        ]
+      },
+      {
+        "list_pkid": 28,
+        "list_name": "Frequency",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "700"
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": "700"
+          },
+          {
+            "name": "739620",
+            "value": "900"
+          }
+        ]
+      },
+      {
+        "list_pkid": 29,
+        "list_name": "Carrier Using Ports",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "Optus"
+          },
+          {
+            "name": "10692V01",
+            "value": "Optus"
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 30,
+        "list_name": "Orientation (degrees)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "22"
+          },
+          {
+            "name": "10692V01",
+            "value": "3"
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": "77"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 31,
+        "list_name": "Electrical Down Tilt (degrees)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "3"
+          },
+          {
+            "name": "10692V01",
+            "value": "3"
+          },
+          {
+            "name": "10692V01",
+            "value": "3"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 32,
+        "list_name": "Mechanical Tilt (degrees)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "1"
+          },
+          {
+            "name": "10692V01",
+            "value": "2"
+          },
+          {
+            "name": "10692V01",
+            "value": "2"
+          },
+          {
+            "name": "739620",
+            "value": "2"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 33,
+        "list_name": "Mounting Height (Metres above ground level)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 34,
+        "list_name": "RET on Antenna",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": "Yes"
+          },
+          {
+            "name": "10692V01",
+            "value": "Yes"
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 35,
+        "list_name": "Feeder Size",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 36,
+        "list_name": "Feeder Type",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 37,
+        "list_name": "Feeder Length (metres)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "2"
+          },
+          {
+            "name": "10692V01",
+            "value": "2"
+          },
+          {
+            "name": "10692V01",
+            "value": "2"
+          },
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 38,
+        "list_name": "Re-used Feeder",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 39,
+        "list_name": "Tail System (internal)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 40,
+        "list_name": "Tail System (internal) Total Length",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 41,
+        "list_name": "Tail System (internal) Total Number",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 42,
+        "list_name": "Tail System (external)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 43,
+        "list_name": "Tail System (external) Total Length",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 44,
+        "list_name": "Tail System (external) Total Number",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "10692V01",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 45,
+        "list_name": "Combiner/Filter 1",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 46,
+        "list_name": "Combiner/Filter 2",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 47,
+        "list_name": "Combiner/Filter 3",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 48,
+        "list_name": "Combiner/Filter 4",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 49,
+        "list_name": "Combiner/Filter 5",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 50,
+        "list_name": "DC Stops",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 51,
+        "list_name": "TMA",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "10692V01",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 52,
+        "list_name": "Total Rack To Power (W)(per Carrier)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "12"
+          },
+          {
+            "name": "10692V01",
+            "value": "12"
+          },
+          {
+            "name": "10692V01",
+            "value": "12"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1306,
+        "list_name": "Antenna Gain dBi",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "0"
+          },
+          {
+            "name": "10692V01",
+            "value": "N/A"
+          },
+          {
+            "name": "10692V01",
+            "value": "N/A"
+          },
+          {
+            "name": "739620",
+            "value": "0"
+          },
+          {
+            "name": "739620",
+            "value": "12.5"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1307,
+        "list_name": "Connector Loss",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": 0
+          },
+          {
+            "name": "10692V01",
+            "value": 0
+          },
+          {
+            "name": "10692V01",
+            "value": 0
+          },
+          {
+            "name": "739620",
+            "value": 0
+          },
+          {
+            "name": "739620",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "list_pkid": 1308,
+        "list_name": "Existing System loss,BTS to Antenna(dB)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": "1"
+          },
+          {
+            "name": "10692V01",
+            "value": 0
+          },
+          {
+            "name": "10692V01",
+            "value": 0
+          },
+          {
+            "name": "739620",
+            "value": "77"
+          },
+          {
+            "name": "739620",
+            "value": "7"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1309,
+        "list_name": "Power at the input of Antenna(dBm) (System Losses included)/STAD",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": 39.79181246047625
+          },
+          {
+            "name": "10692V01",
+            "value": "N/A"
+          },
+          {
+            "name": "10692V01",
+            "value": "N/A"
+          },
+          {
+            "name": "739620",
+            "value": -47
+          },
+          {
+            "name": "739620",
+            "value": 23
+          }
+        ]
+      },
+      {
+        "list_pkid": 1310,
+        "list_name": "EIRP(dBm)",
+        "tus": [
+          {
+            "name": "0709/U-65-17/18-DV8C-B1",
+            "value": 39.79181246047625
+          },
+          {
+            "name": "10692V01",
+            "value": "N/A"
+          },
+          {
+            "name": "10692V01",
+            "value": "N/A"
+          },
+          {
+            "name": "739620",
+            "value": -47
+          },
+          {
+            "name": "739620",
+            "value": 35.5
+          }
+        ]
+      },
+      {
+        "list_pkid": 53,
+        "list_name": "Port Number (Port-pair identities per Frequency)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "11"
+          },
+          {
+            "name": "739620",
+            "value": "22"
+          }
+        ]
+      },
+      {
+        "list_pkid": 54,
+        "list_name": "Frequency",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 55,
+        "list_name": "Carrier Using Ports",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 56,
+        "list_name": "Orientation (degrees)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "1"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 57,
+        "list_name": "Electrical Down Tilt (degrees)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "1"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 58,
+        "list_name": "Mechanical Tilt (degrees)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "1"
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 59,
+        "list_name": "Mounting Height (Metres above ground level)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 60,
+        "list_name": "RET on Antenna",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 61,
+        "list_name": "Feeder Size",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 62,
+        "list_name": "Feeder Type",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 63,
+        "list_name": "Feeder Length (metres)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 64,
+        "list_name": "Re-used Feeder",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 65,
+        "list_name": "Tail System (internal)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 66,
+        "list_name": "Tail System (internal) Total Length",
+        "tus": [
+          {
+            "name": "739620",
+            "value": ""
+          },
+          {
+            "name": "739620",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "list_pkid": 67,
+        "list_name": "Tail System (internal) Total Number",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "2"
+          },
+          {
+            "name": "739620",
+            "value": "3"
+          }
+        ]
+      },
+      {
+        "list_pkid": 68,
+        "list_name": "Tail System (external)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 69,
+        "list_name": "Tail System (external) Total Length",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "3"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 70,
+        "list_name": "Tail System (external) Total Number",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "1"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 71,
+        "list_name": "Combiner/Filter 1",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 72,
+        "list_name": "Combiner/Filter 2",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 73,
+        "list_name": "Combiner/Filter 3",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 74,
+        "list_name": "Combiner/Filter 4",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 75,
+        "list_name": "Combiner/Filter 5",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 76,
+        "list_name": "DC Stops",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 77,
+        "list_name": "TMA",
+        "tus": [
+          {
+            "name": "739620",
+            "value": null
+          },
+          {
+            "name": "739620",
+            "value": null
+          }
+        ]
+      },
+      {
+        "list_pkid": 78,
+        "list_name": "Total Rack To Power (W)(per Carrier)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "1"
+          },
+          {
+            "name": "739620",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1311,
+        "list_name": "Antenna Gain dBi",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "N/A"
+          },
+          {
+            "name": "739620",
+            "value": "N/A"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1312,
+        "list_name": "Connector Loss",
+        "tus": [
+          {
+            "name": "739620",
+            "value": 0
+          },
+          {
+            "name": "739620",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "list_pkid": 1313,
+        "list_name": "Existing System loss,BTS to Antenna(dB)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "11"
+          },
+          {
+            "name": "739620",
+            "value": "22"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1314,
+        "list_name": "Power at the input of Antenna(dBm) (System Losses included)/STAD",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "N/A"
+          },
+          {
+            "name": "739620",
+            "value": "N/A"
+          }
+        ]
+      },
+      {
+        "list_pkid": 1315,
+        "list_name": "EIRP(dBm)",
+        "tus": [
+          {
+            "name": "739620",
+            "value": "N/A"
+          },
+          {
+            "name": "739620",
+            "value": "N/A"
+          }
+        ]
+      }
+    ],
+    "exst_plumb_uploaded_data": [
+      {
+        "file_upload_pkid": 5383,
+        "name": "E3--2.PNG",
+        "view_path": "https://orionwebnpe.vodafone.com.au/api/v1/ebp/images/EBP_WORKORDER_463/EBP_WORKORDER_463_EXST_PLUMB_DIAGRAM_16630901029159.PNG"
+      }
+    ],
+    "exst_connec_uploaded_data": [
+      
+    ]
+  },
+  "proposed": {
+    "no_of_sectors": 0,
+    "sector_info": [
+      
+    ],
+    "proposed_antenna_values": [
+      
+    ],
+    "prop_plumb_uploaded_data": [
+      {
+        "file_upload_pkid": 5382,
+        "name": "Bitbucket_Access.PNG",
+        "view_path": "https://orionwebnpe.vodafone.com.au/api/v1/ebp/images/EBP_WORKORDER_463/EBP_WORKORDER_463_PROP_PLUMB_DIAGRAM_16630900949015.PNG"
+      }
+    ],
+    "prop_connec_uploaded_data": [
+      
+    ]
+  },
+  "scope_of_work": "",
+  "page_completed_by": "TCS",
+  "page_completed": true,
+  "userName": "KAMIDI PAVANI",
+  "date": "9/13/2022"
+}
