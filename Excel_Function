@@ -1,0 +1,81 @@
+  //Excel download
+      public function getExistingAntennaGrid($request = []){
+            $req_array = [];
+            $no_of_sectors = $request['no_of_sectors'];
+            $no_of_antenna_values = $request['existing_antenna_values'];
+            $no_of_tus = [];
+            $index = 0;
+            foreach($request['sector_info'] as $sector) {
+                  foreach($sector['Antenna_Model'] as $model) {
+                        $no_of_tus[] = $model;
+                  }
+                  $titles = [];
+                  foreach($request['existing_antenna_values'] as $list_infor) {
+                        $titles[] = $list_infor['list_name'];
+                  }
+                  $req_array[$index]['titles'] = array_unique($titles);
+                  $req_array[$index]['tus_count'] = count($sector['Antenna_Model']);
+                  $req_array[$index]['sector'] = $sector['name'];
+
+                  $tu_index = 0; $tu_information = [];
+                  foreach($sector['Antenna_Model'] as $sector_tu) {
+                        foreach(array_column($request['existing_antenna_values'],'tus') as $tu){
+                              for($i = 0; $i < count($tu); $i++) {
+                                    if($sector_tu == $tu[$i]['name']) {   
+                                          if( !isset($tu_information[$i])) {
+                                                $tu_information[$i][] = $tu[$i]['name'];          
+                                          }
+                                      $tu_information[$i][] = $tu[$i]['value'];
+                                    }
+                              }                              
+                        }
+                  }
+                  foreach($tu_information as $tu){
+                        $req_array[$index]['tu_information'][$tu_index] = $tu;
+                        $tu_index++;
+                  }
+
+                  $index++;
+            }
+            return $req_array; 
+      }
+      public function getProposedAntennaGrid($request = []){
+            $req_array = [];
+            $no_of_sectors = $request['no_of_sectors'];
+            $no_of_antenna_values = $request['proposed_antenna_values'];
+            $no_of_tus = [];
+            $index = 0;
+            foreach($request['sector_info'] as $sector) {
+                  foreach($sector['Antenna_Model'] as $model) {
+                        $no_of_tus[] = $model;
+                  }
+                  $titles = [];
+                  foreach($request['proposed_antenna_values'] as $list_infor) {
+                        $titles[] = $list_infor['list_name'];
+                  }
+                  $req_array[$index]['titles'] = array_unique($titles);
+                  $req_array[$index]['tus_count'] = count($sector['Antenna_Model']);
+                  $req_array[$index]['sector'] = $sector['name'];
+
+                  $tu_index = 0; $tu_information = [];
+                  foreach($sector['Antenna_Model'] as $sector_tu) {
+                        foreach(array_column($request['proposed_antenna_values'],'tus') as $tu){
+                              for($i = 0; $i < count($tu); $i++) {
+                                    if($sector_tu == $tu[$i]['name']) {   
+                                          if( !isset($tu_information[$i])) {
+                                                $tu_information[$i][] = $tu[$i]['name'];          
+                                          }
+                                      $tu_information[$i][] = $tu[$i]['value'];
+                                    }
+                              }                              
+                        }
+                  }
+                  foreach($tu_information as $tu){
+                        $req_array[$index]['tu_information'][$tu_index] = $tu;
+                        $tu_index++;
+                  }
+
+                  $index++;
+            }
+            return $req_array; 
+      }
