@@ -1,0 +1,42 @@
+$column_index=0;
+        $columns=['H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+   
+        $start_position=38;
+        foreach($existing as $list_info){
+            $column_index=0;
+            $i=$i+1;  
+            if(isset($list_info['sector'])){
+              $sheet->mergeCells("C".($i).":AU".($i));         
+              $sheet->getCell('C'.$i)->setValue($list_info['sector']);
+              $sheet->getStyle("C".($i).":AU".($i))->getBorders()->getBottom()->setBorderStyle(\PhpOffice\PhpSpreadsheet\Style\Border::BORDER_MEDIUM);
+              $i++;
+            
+              $sheet->getStyle("C".($i).":G".($i))->getFill()
+              ->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+              ->getStartColor()->setARGB('AEAEAE');  
+              $sheet->getCell('C'.$i)->setValue(ExcelConstant::AntennaModel);
+              $i++;  
+            
+              foreach($list_info['titles'] as $infor){
+                  $sheet->getStyle("C".($i).":G".($i))->getFill()
+                  ->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+                  ->getStartColor()->setARGB('AEAEAE');     
+                  $sheet->mergeCells("C".($i).":G".($i));    
+                  $sheet->getCell('C'.$i)->setValue($infor);
+                  $i++;
+                }             
+            }
+
+
+            if(isset($list_info['tu_information'])){              
+              foreach($list_info['tu_information'] as $infor){  
+                  $j=$start_position;     
+                  foreach($infor as $information){
+                      $sheet->getCell($columns[$column_index].$j)->setValue($information);                 
+                      $j++;                                                        
+                  }   
+                  $column_index++;
+              }
+              $start_position=$j+2;
+            }
+        }
