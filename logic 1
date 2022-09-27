@@ -1,0 +1,21 @@
+if(isset($req_array[0]['list_name']) && $req_array[0]['list_name'] == Constants::PROPOSED_FREQUENCY){
+      $frequency = null;
+      foreach($req_array[0]['info'] as $tu_info ){
+            if($tu_info['name'] == $antenna_tu){
+                  $frequency = $tu_info['value'];
+            }
+      }
+      foreach($req_array as $list_info){
+                  if($list_info['list_name'] == 'EXISTING_INFOR_'.Constants::EXIST_FREQUENCY){
+                        $compare_index = 0;
+                        foreach($list_info['info'] as $compare_tu){
+                                    if($compare_tu['value'] == $frequency){                                                     
+                                          $req_value = $req_array[2]['info'][$compare_index]['value'];
+                                                return $req_value;
+                                    }
+                                    $compare_index++;
+                        }
+                  }
+      }
+     
+}
